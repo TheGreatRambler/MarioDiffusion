@@ -1,0 +1,6 @@
+.vscode
+savedmodel*
+testgifs
+
+# Binaries used to render level are checked in because they're difficult to build
+#libmarioedit.dylib
