@@ -25,7 +25,7 @@ The theory behind inference in this model comes from a background in cellular au
 
 This approach inevitably began to prioritize not the objects that actually fit a specific circumstance but instead the objects that just appeared the most. Multiple iterations would not improve the output but just cause a small number of the allowed objects to crowd out all other potential objects. An approach I experimented with was limiting the number of samples per object so that the same number of samples per object was included but this did not fix the overcrowding, it just led to rarer objects becoming dominant instead.
 
-Further research would be into a transformer approach, perhaps by going in a zigzag across the level or maybe through some 2d inference rather than linear. Another approach is a GAN paired with a diffusion model, the same approach used by modern image generators. Diffusion models however operate on continuous data. I welcome any techniques to overcome this limitation.
+Further research would be into a transformer approach, perhaps by going in a zigzag across the level or maybe through some 2d inference rather than linear. Another approach is a GAN paired with a diffusion model, the same approach used by modern image generators. Diffusion models however operate on continuous data. I welcome any recommendations to overcome this limitation.
 
 # Inference Code
 ## MacOS M1

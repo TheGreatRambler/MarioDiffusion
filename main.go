@@ -33,10 +33,10 @@ const MAX_OBJECT_ID = 132
 const INCLUDE_AIR = false
 const MODEL_NAME = "savedmodel7"
 const MODEL_CONTEXT_SIZE = 7
-const WIDTH = 31
+const WIDTH = 100
 const HEIGHT = 30
 const ITERATIONS = 30
-const AIR_PROBABILITY = 0.95
+const AIR_PROBABILITY = 0.85
 const BCD_FILENAME = ""
 const RANDOM_SEED = 42
 
@@ -429,8 +429,7 @@ func main() {
 	bcd.OverWorld.GroundCount = 0
 
 	// Specify allowed objects
-	allowed_objects_slice := []int{4, 5, 6, 8}
-	//allowed_objects_slice := []int{0, 1, 4, 19, 63, 64}
+	allowed_objects_slice := []int{4, 5, 8}
 	allowed_objects := NewSet(allowed_objects_slice)
 	r := rand.New(rand.NewSource(RANDOM_SEED))
 
