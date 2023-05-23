@@ -4,6 +4,7 @@ package main
 //#include "./third_party/marioedit/library/include/marioedit_library.hpp"
 //#include <stdlib.h>
 //#include <string.h>
+//#include <stddef.h>
 import "C"
 import (
 	"bytes"
@@ -228,7 +229,7 @@ func GenerateImage(bcd *smm2_parsing.BCD, width int, height int) ([]byte, error)
 
 	var thumbnail_size C.int
 	// uint8_t* MarioEdit_GetJpeg(uint8_t* level_data, size_t level_size, char* asset_folder, int width, int height, int offset_x, int offset_y, int* thumbnail_size);
-	thumbnail := C.MarioEdit_GetFullPng(level_data_pointer, C.ulong(len(level_data)), asset_folder, C.int(width*16), C.int(height*16), 0, 0, (*C.int)(unsafe.Pointer(&thumbnail_size)))
+	thumbnail := C.MarioEdit_GetFullPng(level_data_pointer, C.size_t(len(level_data)), asset_folder, C.int(width*16), C.int(height*16), 0, 0, (*C.int)(unsafe.Pointer(&thumbnail_size)))
 	defer C.MarioEdit_FreeImage(thumbnail)
 
 	return C.GoBytes(unsafe.Pointer(thumbnail), thumbnail_size), nil
