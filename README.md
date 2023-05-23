@@ -41,6 +41,11 @@ go run .
 
 The MarioEdit library is neccesary to render images. Library is located at [TheGreatRambler/MarioEdit](https://github.com/theGreatRambler/marioedit) but because it is difficult to build a built version is in this repo for M1 Mac and Windows. Assets and headers for MarioEdit are provided by a git submodule but it does not need to be recursively downloaded unless you plan on building it. This also uses the Tensorflow C API through the Go API, installation my vary by platform.
 
+## Benchmarks
+* 100 by 30 on 3x3: 50.6225ms per iteration on M1 Mac
+* 100 by 30 on 5x5: 147.326417ms per iteration on M1 Mac
+* 100 by 30 on 7x7: 432.857584ms per iteration on M1 Mac
+
 ## Variables
 * If you trained with *include_air = True* make sure to set *INCLUDE_AIR* to *true*.
 * Set *MODEL_NAME* and *MODEL_CONTEXT_SIZE* to the values set during training.
